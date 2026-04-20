@@ -11,7 +11,8 @@ public class Lists {
 //		sumOfNumbers();
 //		numberOfValuesITheAList();
 //		lastInList();
-		printNumbers();
+//		printNumbers();
+		printNumbersInRange();
 
 	}
 	public static void getThirdElement() {
@@ -127,6 +128,33 @@ public class Lists {
 		for(int i = 0; i<myNumbers.size(); i++) {
 			
 			System.out.println(myNumbers.get(i));
+		}
+		
+	}
+	public static void printNumbersInRange() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter start index: ");
+		int startIndex = Integer.valueOf(scan.nextLine());
+		
+		System.out.print("Enter end index: ");
+		int endIndex = Integer.valueOf(scan.nextLine());
+		
+		System.out.println("Enter Numbers: ");
+		
+		ArrayList<Integer> numbers = new ArrayList<>();
+		
+		while(true) {
+			int num = Integer.valueOf(scan.nextLine());
+			
+			if(num == -1) {
+				break;
+			}else {
+				numbers.add(num);
+			}
+		}
+		
+		for(int i =startIndex; i<=endIndex; i++) {
+			System.out.println(numbers.get(i));
 		}
 		
 	}
