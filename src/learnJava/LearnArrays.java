@@ -31,10 +31,13 @@ public class LearnArrays {
 		int index1 = Integer.valueOf(scan.nextLine());
 		int index2 = Integer.valueOf(scan.nextLine());
 		
+		//swapping
+		int temp = arr[index1];
+		arr[index1] =arr[index2];
+		arr[index2] = temp;
+		
 		for(int j =0; j<arr.length; j++) {
-			int temp = arr[index1];
-			arr[index1] =arr[index2];
-			arr[index2] = temp;
+			
 			
 			System.out.println(arr[j]);
 		}
