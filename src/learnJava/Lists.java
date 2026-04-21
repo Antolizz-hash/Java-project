@@ -12,7 +12,9 @@ public class Lists {
 //		numberOfValuesITheAList();
 //		lastInList();
 //		printNumbers();
-		printNumbersInRange();
+//		printNumbersInRange();
+		searchIndex();
+		
 
 	}
 	public static void getThirdElement() {
@@ -156,6 +158,35 @@ public class Lists {
 		for(int i =startIndex; i<=endIndex; i++) {
 			System.out.println(numbers.get(i));
 		}
+		
+	}
+	public static void searchIndex() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a list of numbers. -1 exits the entry: ");
+		ArrayList<Integer> numbers = new ArrayList<>();
+		
+		
+		while(true) {
+			int num = Integer.valueOf(scan.nextLine());
+			
+			if(num==-1) {
+				break;
+			}
+			else {
+				numbers.add(num);
+			}
+		}
+		System.out.println("Search for: ");
+		int numToSearch = Integer.valueOf(scan.nextLine());
+		
+		for(int i =0;i< numbers.size();i++) {
+			
+			if(numbers.get(i)==numToSearch) {
+				System.out.println(numToSearch + " is at index "+i);
+				
+			}
+		}
+
 		
 	}
 
