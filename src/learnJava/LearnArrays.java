@@ -5,8 +5,13 @@ import java.util.Scanner;
 public class LearnArrays {
 
 	public static void main(String[] args) {
+		int[] numbers = {5,1,3,4,2};
+		
 		// TODO Auto-generated method stub
-		swapArrays();
+//		swapArrays();
+//		sumOfNumbersInArray(numbers);
+//		printNeatly(numbers);
+		printArrayInStars(numbers);
 
 	}
 	
@@ -42,9 +47,39 @@ public class LearnArrays {
 			System.out.println(arr[j]);
 		}
 		
+	}
+	
+	public static int sumOfNumbersInArray(int[] arr) {
+		int sum = 0;
+		
+		for(int i=0; i<arr.length; i++) {
+			sum+=arr[i];
+		}
+		System.out.println(sum);
+		return sum;
+	}
+	public static void printNeatly(int[] arr) {
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i]);
+			if(i<arr.length-1) {
+				System.out.print(",");
+			}
+			
+		}
 		
 		
-		
+	}
+	public static void printArrayInStars(int[] arr) {
+		for(int i=0; i<arr.length; i++) {
+			
+			for(int j =0; j<arr[i];j++) {
+				
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
 	}
 
 }
